@@ -24,21 +24,22 @@
 }
 
 .header{
-    max-width: 420px;
+    max-width: 550px;
+    margin: 0 auto;
     text-align: center;  
 }
 
 .header__title{
-    font-size: clamp(1.3rem,3vw,1.8rem);
+    font-size: clamp(1.3rem,3vw,2.3rem);
     font-weight: 200;
 }
 .header__span{
-    font-size: clamp(1.3rem,3vw,1.8rem);
+    font-size: clamp(1.3rem,3vw,2.3rem);
     font-weight: 600;
 }
 
 .header__p{
-    font-size: 0.85rem;
+    font-size: clamp(0.85rem,3vw,0.99rem);
     font-weight: 200;
     color: var(--Grayish-Blue);
     margin-top: 0.8rem;
@@ -46,7 +47,7 @@
 }
 
 .card{
-    max-width: 290px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     border-radius: 3.5px;
@@ -70,19 +71,20 @@
 }
 
 .card__title{
-    font-size: 1.1rem;
+    font-size:clamp(1.1rem,3vw,1.4rem);
 }
 
 .card__info{
     color: var(--Grayish-Blue);
     font-weight: 200;
-    font-size: 0.75rem;
+    font-size: clamp(0.68rem,2vw,0.85rem);
     
 }
 
 .card__icon{
-    width: 20%;
-    margin: 0.8rem 0;
+    width: 22%;
+    margin-top: 1rem;
+    margin-bottom: clamp(0,3vw,1rem);
     align-self: flex-end;
 }
 
@@ -94,31 +96,41 @@
         margin: auto;
     }
     .main{
-        max-width: 1000px;
+        width: 100%;
         display: grid;
+        margin: 2.5rem auto;
+        justify-content: center;
         gap: 1.5rem;
-        grid-template-columns: repeat(3,1fr);
+        /* grid-template-columns: 1.05fr 0.9fr 1.05fr; */
+        grid-template-columns: 400px 400px 400px;
+
+    }
+
+    .card__icon{
+        margin-bottom: 1rem;
     }
     .card{
         margin: 0;
     }
-    .header__p{
+    /* .header__p{
         font-size: 0.77rem;
-    }
+    } */
     .card--cyan{
          order: 2;
-         margin: auto;
+         margin: auto 0 auto auto;
          grid-row: 1 / 3;
     }
     .card--red{
          order: 1;
+         margin: auto;
     }
     .card--orange{
          order: 3;
          grid-row: 2 / 3;
+         margin: auto;
     }
     .card--blue{
-        margin: auto;
+        margin: auto auto auto 0;
             order:4;
             grid-row: 1 / 3;
     }
